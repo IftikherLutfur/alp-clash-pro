@@ -11,16 +11,17 @@
 >
     <main>
         <!--Home-Section-->
-    <section class="home min-h-screen flex justify-center items-center hidden ">
+    <section id="home-screen" class="min-h-screen flex justify-center items-center">
    <div class="flex flex-col items-center gap-5 ">
     <h1 class="text-7xl font-bold text-white mt-10 ">ALPHA CLASH PRO</h1>
 <p class="text-white text-2xl font-semibold">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-<button class="btn btn-active btn-secondary text-xl font-bold w-40">Play Now</button>
+<button onclick="play()" class="btn btn-active btn-secondary text-xl font-bold w-40">Play Now</button>
    </div>
     </section>
 
     <!--Play Section-->
-    <section class="play-ground hidden">
+    <!--Play Section Start-->
+    <section id="play-ground" class="hidden">
         <div class="flex flex-col items-center gap-10 pt-10">
             <!--Screen-->
 
@@ -28,45 +29,45 @@
     <div class="flex justify-center">
         <p class="bg-[#2F2941] px-6 py-2 rounded-b-xl font-bold text-2xl text-white"> Don't watch keyboard  while playing...</p>
     </div>
-  <div class="flex justify-center items-start h-full mt-16">
-    <p class="text-black text-9xl font-bold">Y</p>
+  <div class="flex  justify-center items-start h-full mt-16">
+    <p id="current" class="text-black text-9xl font-bold">Y</p>
   </div>
 </div>
  
             <!--Keyboard start-->
  <div>
  <div class="flex justify-center gap-1 my-1 w-full">
-<kbd class="kbd">q</kbd>
-<kbd class="kbd">w</kbd>
-<kbd class="kbd">e</kbd>
-<kbd class="kbd">r</kbd>
-<kbd class="kbd">t</kbd>
-<kbd class="kbd">y</kbd>
-<kbd class="kbd">u</kbd>
-<kbd class="kbd">i</kbd>
-<kbd class="kbd">o</kbd>
-<kbd class="kbd">p</kbd>
+<kbd id="q" class="kbd">q</kbd>
+<kbd id="w" class="kbd">w</kbd>
+<kbd id="e" class="kbd">e</kbd>
+<kbd id="r" class="kbd">r</kbd>
+<kbd id="t" class="kbd">t</kbd>
+<kbd id="y" class="kbd">y</kbd>
+<kbd id="u" class="kbd">u</kbd>
+<kbd id="i" class="kbd">i</kbd>
+<kbd id="o" class="kbd">o</kbd>
+<kbd id="p" class="kbd">p</kbd>
      </div> 
 <div class="flex justify-center gap-1 my-1 w-full">
-<kbd class="kbd">a</kbd>
-<kbd class="kbd">s</kbd>
-<kbd class="kbd">d</kbd>
-<kbd class="kbd">f</kbd>
-<kbd class="kbd">g</kbd>
-<kbd class="kbd">h</kbd>
-<kbd class="kbd">j</kbd>
-<kbd class="kbd">k</kbd>
-<kbd class="kbd">l</kbd>
+<kbd id="a" class="kbd">a</kbd>
+<kbd id="s" class="kbd">s</kbd>
+<kbd id="d" class="kbd">d</kbd>
+<kbd id="f" class="kbd">f</kbd>
+<kbd id="g" class="kbd">g</kbd>
+<kbd id="h" class="kbd">h</kbd>
+<kbd id="j" class="kbd">j</kbd>
+<kbd id="k" class="kbd">k</kbd>
+<kbd id="l" class="kbd">l</kbd>
     </div> 
 <div class="flex justify-center gap-1 my-1 w-full">
-<kbd class="kbd">z</kbd>
-<kbd class="kbd">x</kbd>
-<kbd class="kbd">c</kbd>
-<kbd class="kbd">v</kbd>
-<kbd class="kbd">b</kbd>
-<kbd class="kbd">n</kbd>
-<kbd class="kbd">m</kbd>
-<kbd class="kbd">/</kbd>
+<kbd id="z" class="kbd">z</kbd>
+<kbd id="x" class="kbd">x</kbd>
+<kbd id="c" class="kbd">c</kbd>
+<kbd id="v" class="kbd">v</kbd>
+<kbd id="b" class="kbd">b</kbd>
+<kbd id="n" class="kbd">n</kbd>
+<kbd id="m" class="kbd">m</kbd>
+<kbd id="/" class="kbd">/</kbd>
      </div>          
            
     </div>
@@ -79,31 +80,36 @@
  <button class="btn bg-[#894189] border-[#894189] text-white rounded-full text-xl">
     Life
      <img src="images/Group 23.svg" alt="">
-     <span>1</span>
+     <span id="current-life">5</span>
    </button>
 
    <button class="btn bg-[#360490] border-[#360490] text-white rounded-full text-xl">
     Score
   <img src="images/monetization_on.svg" alt="">
-   <span>1</span>
+   <span id="current-score">0</span>
     </button>
      </div>
      </div>
 
     </section>
+    <!--Play Section End-->
 
     <!--Score Section-->
     <!--Score Section Start-->
-    <section class="score flex justify-center items-center min-h-screen">
+    <section id="final-score" class=" flex justify-center items-center min-h-screen hidden">
     <div class="text-center space-y-4 bg-[#FFFFFF33] rounded-xl p-5">
+      <h4 class="text-3xl text-red-500">GAME OVER</h4>
         <h1 class="text-8xl text-white">
   <span 
-  class="font-bold">Score:</span><span class="">14</span>
+  class="font-bold">Score:</span><span id="total-score">14</span>
   </h1>
-  <button class="btn bg-white font-bold text-black">Play Again</button>
+  <button onclick="play()" class="btn bg-white font-bold text-black">Play Again</button>
   <p class="text-white text-2xl">Practice will make you pro</p>
     </div>
     </section>
+    <!--Score Section End-->
     </main>
+    <script src="script/uti.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
